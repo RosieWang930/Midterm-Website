@@ -25,15 +25,14 @@
 
     <div class="item-4x3">
       <h2 class="subtitle" id="ABOUT">ABOUT</h2>
-      <p class="introduction">We are a private movie theater in NYC that only open at night, from 11:00pm to 5:00am
-        We offers a wide selection of movies, from the latest cinema movies to old films.
+      <p class="introduction">We are a private movie theater in NYC that only open at night, from <span class="highlight">11:00pm to 5:00am</span>.
+        We offer a wide selection of movies, from the latest cinema movies to old films.
         We host independent film screenings regularly and available for other customizable event experience, such as birthday parties</p>
     </div>
-
     <img class="item-4x3 images" src="theater.jpg" alt="theater">
+    <div class="breaker"></div>
 
     <h2 class="fullWidth subtitle" id="MOVIES">MOVIES</h2>
-
     <img class="item-1x2 images" src="RomanHoliday.jpg" alt="">
     <img class="item-1x2 images" src="Dora.jpg" alt="">
     <img class="item-1x2 images" src="Cubby.jpg" alt="">
@@ -42,17 +41,43 @@
     <img class="item-1x2 images" src="theGodfather.jpg" alt="">
     <img class="item-1x2 images" src="theAssassin.jpg" alt="">
     <img class="item-1x2 images" src="old-boy.jpg" alt="">
+    <div class="breaker"></div>
 
 
-    <h2 class="item-3x2 subtitle" id="EVENTS">SPECIAL EVENTS</h2>
     <div class="item-5x3 images">
-      <img class="images" src="event1.jpg" alt="">
       <img class="images" src="event2.jpg" alt="">
+      <img class="images" src="event1.jpg" alt="">
       <img class="images" src="event3.jpg" alt="">
     </div>
+    <div class="item-3x2 special">
+      <h2 class="subtitle" id="EVENTS">SPECIAL EVENTS</h2>
+      <ul style="list-style-type:none;">
+        <li>Film Premieres</li>
+        <li>Corporate Events</li>
+        <li>Birthday Parties</li>
+        <li>LO-RES Bar</li>
+        <li>Reunions</li>
+        <li>Bachelor parties</li>
+        <li>Graduations</li>
+        <li>......</li>
+      </ul>
+    </div>
+    <div class="breaker"></div>
 
-    <h2 class="fullWidth subtitle" id="BOOKING">BOOK YOUR EVENTS</h2>
+    <h2 class="item-5x3 subtitle" id="BOOKING">BOOK YOUR EVENTS</h2>
+    <div class="item-5x1 formContainer">
+      <form action="action_page.php">
 
+        <label for="fname" class="formTitle">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your name..">
+
+        <label for="subject" class="formTitle">Subject</label>
+        <textarea id="subject" name="subject" placeholder="Events Description" style="height:8vmin;"></textarea>
+
+        <input type="submit" value="Submit">
+
+      </form>
+    </div>
   </div>
   <div class="footer">
     <p>@ 2019 by Ruoxi Wang</p>

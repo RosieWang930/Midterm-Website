@@ -21,13 +21,12 @@ h1{
 }
 
 h1:hover{
-/*  background-color: #6D0FF2;
-  color: #6D0FF2;*/
   text-decoration-line: underline;
   text-decoration-color: white;
 
   color: transparent;
   -webkit-text-stroke: 0.8px #C004D9;
+  /*text-shadow:0px 0px 10px #C004D9;*/
 }
 
 h2{
@@ -40,7 +39,7 @@ h2{
 
 p{
   font-family: 'Molengo', sans-serif;
-  font-size: 2vmin;
+  font-size: 2.5vmin;
 }
 
 #ABOUT {
@@ -48,15 +47,16 @@ p{
 }
 
 #ABOUT:hover{
-  color: #C004D9;
+  text-shadow:0px 0px 30px #C004D9;
 }
 
 #MOVIES {
+  text-shadow:0px 0px 30px #AB05F2;
   -webkit-text-stroke: 0.2px #AB05F2;
 }
 
 #MOVIES:hover{
-  color: #AB05F2;
+  -webkit-text-stroke: 0.2px #c91bff;
 }
 
 #EVENTS {
@@ -65,12 +65,14 @@ p{
 }
 
 #EVENTS:hover{
-  color: #6D0FF2;
+  text-shadow:0px 0px 30px #6D0FF2;
 }
 
 #BOOKING {
-  -webkit-text-stroke: 0.2px #3316F2;
-  z-index: 2;
+  text-shadow:0px 0px 20px #3316F2;
+  color: #3316F2;
+  font-size: 20vmin;
+  z-index: -2;
 }
 
 #BOOKING:hover{
@@ -123,9 +125,14 @@ p{
   margin: 10vmin 0 10vmin 0;
 }
 
+.highlight{
+  border: 1px solid white;
+  font-size: 2.5vmin;
+  padding: 0 1vmin 0 1vmin;
+}
 
 .introduction{
-  padding: 5vmin 7vmin 5vmin 7vmin;
+  padding: 2vmin 7vmin 5vmin 7vmin;
   line-height: 2em;
 }
 
@@ -133,13 +140,39 @@ p{
   width: 100%;
 }
 
+.special{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .subtitle{
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 0.5s;
+}
+
+ul{
+  margin-top: 7vmin;
+}
+
+li{
+  font-family: 'Molengo', sans-serif;
+  font-size: 2.5vmin;
+  line-height: 2em;
+}
+
+li:hover{
+  border: 1px solid white;
 }
 
 .sidenav{
+  padding: 30vmin 0 30vmin 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   height: 100%; /* Full-height: remove this if you want "auto" height */
   width: 12vmin; /* Set the width of the sidebar */
   position: fixed; /* Fixed Sidebar (stay in place on scroll) */
@@ -148,21 +181,25 @@ p{
   right: 0;
   /*background-color: #111;  Black */
   overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 20px;
 }
 
 .sidenav a {
-  display: flex;
-  flex-direction: column;
   padding: 2vmin 2vmin 0 2vmin;
   font-family: 'Molengo', sans-serif;
   font-size: 1.5vmin;
   text-decoration: none;
-  color: #818181;
+  text-align: center;
+  color: white;
 }
 
 .sidenav a:hover {
   color: #f1f1f1;
+  font-size: 2vmin;
+}
+
+.breaker{
+  height: 5vmin;
+  grid-column-end: span 8;
 }
 
 .footer{
@@ -213,4 +250,59 @@ p{
 .item-5x3{
   grid-column-end: span 5;
   grid-row-end: span 3;
+}
+
+.item-5x1{
+  grid-column-end: span 5;
+}
+
+.formTitle{
+  font-size: 2.5vmin;
+  font-family: 'Molengo', sans-serif;
+}
+
+#name,#subject{
+  background-color: rgba(255,255,255,0.1);
+}
+
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 2vmin; /* Some padding */
+  border: 1px solid white; /* Gray border */
+  border-radius: 1vmin; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 2vmin; /* Add a top margin */
+  margin-bottom: 3vmin; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+input[type=placeholder]{
+  color: white;
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: #3316F2;
+  color: white;
+  padding: 2vmin 3vmin;
+  border: none;
+  border-radius: 1vmin;
+  cursor: pointer;
+  position: relative;
+  left:78vmin;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: #6D0FF2;
+}
+
+/* Add a background color and some padding around the form */
+.formContainer {
+  margin-top: -70vmin;
+  grid-column-start: 4;
+  border-radius: 1vmin;
+  padding-bottom: 10vmin;
 }
